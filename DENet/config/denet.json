@@ -22,7 +22,7 @@
             "batch_size": 4,
             "num_workers": 8,
             "use_shuffle": true,
-            "data_len": -1 // -1 
+            "data_len": -1
         },
         "val": {
             "name": "x16",
