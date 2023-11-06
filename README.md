@@ -21,5 +21,5 @@ python train.py  -c config/denet.json
 Test DENet:
 ```Python
 cd DENet
-python test.py -c config/sr_sr3_32_256_small_test.json
+python test.py -c config/denet.json
 ```
