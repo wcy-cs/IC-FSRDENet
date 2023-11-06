@@ -12,3 +12,14 @@ Test IC-FSRNet:
 cd IC-FSRNet
 python test.py --dir_data dir_data --data_test test --writer_name icfsrnet-test --model MYNET 
 ```
+
+Train DENet model:
+```Python
+cd DENet
+python train.py  -c config/denet.json
+```
+Test DENet:
+```Python
+cd DENet
+python test.py -c config/sr_sr3_32_256_small_test.json
+```
