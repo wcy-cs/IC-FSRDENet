@@ -1,10 +1,10 @@
 {
-    "name": "fsr",
+    "name": "llfsr",
     "phase": "train", 
     "gpu_ids": [
         1
     ],
-    "path": { 
+    "path": { //set the path
         "log": "logs",
         "tb_logger": "tb_logger",
         "results": "results",
@@ -15,9 +15,9 @@
         "train": {
             "name": "x16",
             "mode": "LRHR",
-            "dataroot": " ",
+            "dataroot": "train",
             "datatype": "img", 
-            "l_resolution": 16, 
+            "l_resolution": 32, 
             "r_resolution": 256, 
             "batch_size": 4,
             "num_workers": 8,
@@ -27,8 +27,8 @@
         "val": {
             "name": "x16",
             "mode": "LRHR",
-            "dataroot": "t",
-            "datatype": "img", 
+            "dataroot": "test",
+            "datatype": "img",
             "l_resolution": 32,
             "r_resolution": 256,
             "data_len": -1 
@@ -54,6 +54,20 @@
             "res_blocks": 2,
             "dropout": 0.2
         },
+        "beta_schedule": { 
+            "train": {
+                "schedule": "linear",
+                "n_timestep": 2000,
+                "linear_start": 1e-6,
+                "linear_end": 1e-2
+            },
+            "val": {
+                "schedule": "linear",
+                "n_timestep": 2000,
+                "linear_start": 1e-6,
+                "linear_end": 1e-2
+            }
+        },
         "diffusion": {
             "image_size": 256,
             "channels": 3, 
@@ -68,6 +82,14 @@
         "optimizer": {
             "type": "adam",
             "lr": 1e-4
+        },
+        "ema_scheduler": { 
+            "step_start_ema": 5000,
+            "update_ema_every": 1,
+            "ema_decay": 0.9999
         }
     },
+    "wandb": {
+        "project": "llfsr"
+    }
 }
