@@ -7,3 +7,8 @@ Train IC-FSRNet model:
 cd IC-FSRNet
 python train.py --dir_data dir_data --writer_name icfsrnet --model MYNET 
 ```
+Test IC-FSRNet:
+```Python
+cd IC-FSRNet
+python train.py --dir_data dir_data --writer_name icfsrnet --model MYNET 
+```
