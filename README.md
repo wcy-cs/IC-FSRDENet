@@ -10,5 +10,5 @@ python train.py --dir_data dir_data --writer_name icfsrnet --model MYNET
 Test IC-FSRNet:
 ```Python
 cd IC-FSRNet
-python train.py --dir_data dir_data --writer_name icfsrnet --model MYNET 
+python test.py --dir_data dir_data --data_test test --writer_name icfsrnet-test --model MYNET 
 ```
