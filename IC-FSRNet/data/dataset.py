@@ -21,7 +21,7 @@ class Data(data.Dataset):
         self.imgs_LR = sorted(
             glob.glob(os.path.join(self.imgs_LR_path, '*.png'))
         )
-        print(self.imgs_HR_path, self.imgs_LR_path)
+      
         self.transform = transforms.ToTensor()
         self.train = train
 
@@ -32,9 +32,6 @@ class Data(data.Dataset):
         img_path_LR = os.path.join(self.imgs_LR_path, tempfilename)
         LR = Image.open(img_path_LR)
         HR = Image.open(img_path_HR)
-        if self.args.small:
-            LR = LR.resize((256//self.args.scale, 256//self.args.scale), Image.BICUBIC)
-        # feature = Image.open(img_path_feature)
         HR = np.array(HR)
         LR = np.array(LR)
         LR = np.ascontiguousarray(LR)
