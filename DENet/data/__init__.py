@@ -18,13 +18,14 @@ def create_dataloader(dataset, dataset_opt, phase):
 def create_dataset(dataset_opt, phase):
     mode = dataset_opt['mode']
     from data.LRHR_dataset import LRHRDataset as D
-    dataset = D(dataroot=dataset_opt['dataroot'],
-                datatype=dataset_opt['datatype'],
+    dataset = D(
                 l_resolution=dataset_opt['l_resolution'],
                 r_resolution=dataset_opt['r_resolution'],
+                data_LR = dataset_opt['data_LR'],
+                data_HR = dataset_opt['data_HR'],
                 split=phase,
                 data_len=dataset_opt['data_len'],
-                name=dataset_opt['name'],
+                # name=dataset_opt['name'],
                 )
     logger = logging.getLogger('base')
     logger.info('Dataset [{:s} - {:s}] is created.'.format(dataset.__class__.__name__,
