@@ -3,7 +3,6 @@ import torch
 from model import common,fenet,refineblock
 from model import biablock
 import torch.nn.functional as F
-from einops import rearrange
 class LightNet(nn.Module):
     def __init__(self, args):
         super(LightNet, self).__init__()
@@ -90,8 +89,8 @@ class LFSRNet(nn.Module):
         self.up22 = common.Upsampler_module(scale=2, n_feats=args.n_feats)
 
         self.up2_stage2 = biablock.Biablock(args)
-
         self.up23 = common.Upsampler_module(scale=2, n_feats=args.n_feats)
+        self.up2_stage3 = biablock.Biablock(args)
         self.tail =  nn.Conv2d(in_channels=args.n_feats, out_channels=3, kernel_size=3, stride=1, padding=1)
 
         self.refine_grid = nn.Sequential(*[refineblock.RB(args),refineblock.RB(args),refineblock.RB(args),refineblock.RB(args),refineblock.RB(args)
