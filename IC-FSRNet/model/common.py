@@ -158,7 +158,7 @@ class RCAB(nn.Module):
 class ResidualGroup(nn.Module):
     def __init__(self, n_feat, kernel_size, reduction, act,norm, n_resblocks,args):
         super(ResidualGroup, self).__init__()
-          modules_body = [
+        modules_body = [
                 RCAB(n_feat) for _ in range(n_resblocks)]
         modules_body.append(ConvBNReLU2D(n_feat, n_feat, kernel_size, padding=1, act=act, norm=norm))
         self.body = nn.Sequential(*modules_body)
