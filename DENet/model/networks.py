@@ -23,9 +23,7 @@ def weights_init_orthogonal(m):
 def init_weights(net, init_type='orthogonal', scale=1, std=0.02):
     logger.info('Initialization method [{:s}]'.format(init_type))
     net.apply(weights_init_orthogonal)
-    else:
-        raise NotImplementedError(
-            'initialization method [{:s}] not implemented'.format(init_type))
+
 
 def define_G(opt):
     model_opt = opt['model']
