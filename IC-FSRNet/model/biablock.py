@@ -69,10 +69,9 @@ class BasicBlock2(nn.Module):
         self.conv1 = nn.Conv2d(in_channels=args.n_feats, out_channels=args.n_feats, kernel_size=3, stride=1, padding=1)
         self.conv2 = nn.Conv2d(in_channels=args.n_feats, out_channels=args.n_feats, kernel_size=3, stride=1, padding=1)
         self.relu = nn.ReLU(True)
-        if args.RCAB:
-            self.basic1 = common.RCAB(args.n_feats)
-        else:
-            self.basic1 = common.ResBlock(args.n_feats)
+
+        self.basic1 = common.RCAB(args.n_feats)
+
 
         self.slice = Slice()
         self.adjust = nn.Sequential(*[nn.Conv2d(in_channels=args.n_feats, out_channels=args.n_feats, kernel_size=3, stride=1, padding=1), nn.Sigmoid()])
