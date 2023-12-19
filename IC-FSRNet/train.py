@@ -9,8 +9,7 @@ from data import dataset
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import util
-import torch.nn.functional as F
-import torchvision
+
 net = model.get_model(args)
 writer = SummaryWriter('./logs/{}'.format(args.writer_name))
 traindata = dataset.Data(root=os.path.join(args.dir_data, args.data_train), args=args, train=True)
