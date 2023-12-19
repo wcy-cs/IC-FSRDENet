@@ -15,8 +15,8 @@
         "train": {
             "name": "x16",
             "mode": "LRHR",
-            "dataroot": "train",
-            "datatype": "img", 
+            "data_LR": "/train/LR",
+            "data_HR": "/train/HR",
             "l_resolution": 32, 
             "r_resolution": 256, 
             "batch_size": 4,
@@ -27,8 +27,8 @@
         "val": {
             "name": "x16",
             "mode": "LRHR",
-            "dataroot": "test",
-            "datatype": "img",
+            "data_LR": "/val/LR",
+            "data_HR": "/val/HR",
             "l_resolution": 32,
             "r_resolution": 256,
             "data_len": -1 
