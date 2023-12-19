@@ -1,5 +1,5 @@
 {
-    "name": "denet_test",// sr_PSNR_21.42_10.0M
+    "name": "denet_test",// 
     "phase": "val", // train or val
     "gpu_ids": [
         1
@@ -16,8 +16,8 @@
         "val": {
             "name": "lr_x16",
             "mode": "LRHR",
-            "data_LR": "/data/wangchy/data/LL/test/sr_32_256_lr_x16",
-            "data_HR": "/data/wangchy/data/LL/test/HR",
+            "data_LR": "/test/LR",
+            "data_HR": "/test/HR",
             "l_resolution": 32,
             "r_resolution": 256,
             "data_len": -1
