@@ -10,7 +10,7 @@
         "results": "results",
         "checkpoint": "checkpoint",
         //"resume_state": null
-        "resume_state": "./pretrained_model/I1000000_E1311" //pretrain model or training state
+        "resume_state": "./pretrained_model/DENet" //pretrain model or training state
     },
     "datasets": {
         "val": {
