@@ -5,6 +5,7 @@ import argparse
 import logging
 import core.logger as Logger
 from tensorboardX import SummaryWriter
+import core.metrics as Metrics
 import os
 import numpy as np
 
@@ -41,9 +42,7 @@ if __name__ == "__main__":
     current_epoch = diffusion.begin_epoch
     n_iter = opt['train']['n_iter']
 
-    if opt['path']['resume_state']:
-        logger.info('Resuming training from epoch: {}, iter: {}.'.format(
-            current_epoch, current_step))
+
 
     diffusion.set_new_noise_schedule(
         opt['model']['beta_schedule'][opt['phase']], schedule_phase=opt['phase'])
