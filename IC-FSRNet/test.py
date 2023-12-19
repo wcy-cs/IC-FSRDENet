@@ -8,12 +8,12 @@ import model
 from data import dataset
 import torchvision
 from torch.utils.data import DataLoader
-from torch.utils.tensorboard import SummaryWriter
+
 import util
 net = model.get_model(args)
 testdata = dataset.Data(root=os.path.join(args.dir_data, args.data_test), args=args, train=False)
 testset = DataLoader(testdata, batch_size=1, shuffle=False, num_workers=1)
-pretrained_dict = torch.load('pretrained_model.pth')
+pretrained_dict = torch.load('pretrained_model/pretrained_model.pth')
 net.load_state_dict(pretrained_dict)
 save_name = "result-test"
 os.makedirs(os.path.join(args.save_path, args.writer_name, save_name), exist_ok=True)
