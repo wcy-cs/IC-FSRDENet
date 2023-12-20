@@ -27,7 +27,8 @@ Test DENet:
 cd DENet
 python test.py -c config/denet_test.json
 ```
-## Dataset
-[BaiDu](https://pan.baidu.com/s/1LX66EKkx51G7ZUAL4MYgRw) passward:nasx 
+## Test Dataset
+[BaiDu](https://pan.baidu.com/s/1D1LOou8CKrjy3v-vXPp59A) passward:x6y7 
+--来自百度网盘超级会员v3的分享
 ## Pretrained Model
 [BaiDu](https://pan.baidu.com/s/1Oe95lTX6xQ4NzaSG1ZOIeQ) passward:ywqj 
