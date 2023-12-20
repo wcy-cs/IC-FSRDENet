@@ -22,7 +22,7 @@ python train.py  -c config/denet.json
 Test DENet:
 ```Python
 cd DENet
-python test.py -c config/denet.json
+python test.py -c config/denet_test.json
 ```
 ## Dataset
 [BaiDu](https://pan.baidu.com/s/1LX66EKkx51G7ZUAL4MYgRw) passward:nasx 
