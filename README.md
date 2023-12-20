@@ -2,6 +2,9 @@
 
 Code for the paper IC-FSRDENet.
 
+## Requirement
+Pytorch 1.11.0 Cuda 11.4 
+
 Train IC-FSRNet model:
 
 ```Python
