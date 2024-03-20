@@ -32,3 +32,14 @@ python test.py -c config/denet_test.json
 
 ## Pretrained Model
 [BaiDu](https://pan.baidu.com/s/1Oe95lTX6xQ4NzaSG1ZOIeQ) passward:ywqj 
+
+
+## Citation 
+```
+@InProceedings{Wang_2024_AAAI,
+    author    = {Wang, Chenyang and Jiang, Junjun and Jiang, Kui and Liu, Xianming},
+    title     = {Spatial-Frequency Mutual Learning for Face Super-Resolution},
+    booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+    year      = {2024},
+}
+```
