@@ -1,6 +1,6 @@
 # Low-Light Face Super-resolution via Illumination, Structure, and Texture Associated Representation
 
-Code for the paper IC-FSRDENet.
+Code for the [paper](https://ojs.aaai.org/index.php/AAAI/article/view/28339) IC-FSRDENet.
 
 ## Requirement
 Pytorch 1.11.0 Cuda 11.4 
