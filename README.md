@@ -38,7 +38,7 @@ python test.py -c config/denet_test.json
 ```
 @InProceedings{Wang_2024_AAAI,
     author    = {Wang, Chenyang and Jiang, Junjun and Jiang, Kui and Liu, Xianming},
-    title     = {Spatial-Frequency Mutual Learning for Face Super-Resolution},
+    title     = {Low-Light Face Super-resolution via Illumination, Structure, and Texture Associated Representation},
     booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
     year      = {2024},
 }
